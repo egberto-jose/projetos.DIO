@@ -3,7 +3,7 @@
 //Criação de um algorítmo que classifique o nível de um herói ou heroína.
 //Exigências: Variáveis, operadores, laços de repetição, estruturas de decisões.
 let personagem = "Sakura";
-let genero = "M";
+let genero = "F";
 let fazesVencidas= 5;
 let contador = 0;
 let texto = "";
