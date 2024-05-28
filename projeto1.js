@@ -4,11 +4,11 @@
 //Exigências: Variáveis, operadores, laços de repetição, estruturas de decisões.
 let personagem = "Sakura";
 let genero = "F";
-let fazesVencidas= 5;
+let fazesVencidas= 19;
 let contador = 0;
 let texto = "";
 let jogoFinalizado = "";
-//Verificação de gênero da personagem.
+//Verificação de gênero da personagem, importante para classifocar como heói ou heroína.
 switch(genero)
 {
     case "F":
@@ -23,16 +23,17 @@ for (let i = 1; i <= fazesVencidas; i++)
 {
     contador +=500;
 }
-//Texto final, parabenizando ou motivando o jogador.
+//Texto parabenizando ou motivando o jogador.
 if (contador === 10500)
 {
     jogoFinalizado = "Parabéns! Jogo finalizado.";
 }
 else
 {
-    jogoFinalizado = "Sempre há limites. Eu não conheço os meus.";
+    jogoFinalizado = "Sempre há limites. Eu não conheço os meus.\nMeu foco é RADIANTE";
 }
 //Verificação da classificação da personagem
+//Obs.: é uma boa prática usar o switch case para operações lógicas?
 switch (contador > 0 )
 {
     case contador <= 1000:
@@ -60,7 +61,8 @@ switch (contador > 0 )
         texto = "Radiante";
         break;
     }
-console.log(genero + ": " + personagem)
-console.log("Pontuação: " + contador)
-console.log("Nível: " + texto)
-console.log(jogoFinalizado)
+//Criação de uma variável para mostrar a classificação geral da personagem.
+let textoFinal = "-Classificação-"
+textoFinal = textoFinal +"\n" + genero + ": " + personagem + "\nPontuação: " + contador
+textoFinal = textoFinal + "\nNível: " + texto + "\n" + jogoFinalizado
+console.log(textoFinal)
