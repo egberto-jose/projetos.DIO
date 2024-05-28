@@ -57,12 +57,11 @@ switch (contador > 0 )
     case contador > 9000 && contador <= 10000:
         texto = "Imortal";
         break;
-    case contador > 10000:
+    default:
         texto = "Radiante";
-        break;
-    }
+      }
 //Criação de uma variável para mostrar a classificação geral da personagem.
-let textoFinal = "-Classificação-"
-textoFinal = textoFinal +"\n" + genero + ": " + personagem + "\nPontuação: " + contador
-textoFinal = textoFinal + "\nNível: " + texto + "\n" + jogoFinalizado
+let textoFinal = "-Classificação-";
+textoFinal = textoFinal +"\n" + genero + ": " + personagem + "\nPontuação: " + contador;
+textoFinal = textoFinal + "\nNível: " + texto + "\n" + jogoFinalizado;
 console.log(textoFinal)
