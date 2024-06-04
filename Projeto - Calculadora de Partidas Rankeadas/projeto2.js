@@ -1,15 +1,23 @@
+//Segundo projeto plataforma DIO
+//Curso: Lógica de Programação.
+//Nome do projeto: Calculadora de Partidas Rankeadas
+// Criação de um algorítmo para posicionar uma personagem, levando em consideração derrotas 
+// e vitórias.
+//É vital a criação de uma função para definir o gênero da personagem
+//Dinamisa o retorno, na saída, se é um herói ou herína
 function define (gender) {
-    let text = "";
+    let textDefine = "";
     switch (gender) {
         case "F":
-            text = "A Heroína"            
+            textDefine = "A heroína"            
             break;
         default:
-            text = "O heroi"
+            textDefine = "O heroi"
             break;
     }
-    console.log(text)
+    return textDefine
 }
+//Criação da função para verificar o nível da personagem
 function score (valueA, valueB) 
 {
     let ranking = valueA - valueB;
@@ -35,15 +43,18 @@ function score (valueA, valueB)
     else if (ranking > 100){
         level = "Imortal"
     }
-    console.log(level)
+    return level
 }
+//Criação da função para verificar a pontuação da personagem
 function result(valueA, valueB) {
-    let ranking = valueA - valueB;
-    console.log(ranking)
+    return  valueA - valueB;
 }
-let numberVictory = 50;
+let numberVictory = 120;
 let numberDefeat = 20;
-let nameGender = "M"
-score(numberVictory,numberDefeat)
-result(numberVictory,numberDefeat)
-define(nameGender)
+let nameCharacter = "HolyAngemon";
+let nameGender = "M";
+let part1 = score(numberVictory,numberDefeat);
+let part2 = result(numberVictory,numberDefeat);
+let part3 = define(nameGender);
+let text = `${part3} tem saldo de ${part2} pontos e está no nível ${part1}`
+console.log(text)
