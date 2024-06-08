@@ -20,7 +20,7 @@ function define (gender) {
 //Criação da função para verificar o nível da personagem
 function score (valueA, valueB) 
 {
-    let ranking = valueA - valueB;
+    let ranking = result(valueA, valueB);
     let level = "";
     if (ranking <= 10){
         level = "Ferro";
