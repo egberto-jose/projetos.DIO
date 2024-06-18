@@ -1,9 +1,9 @@
-class adventure {
+class hero {
     constructor(name, age) {
         this.name = name;
         this.age = age;
     }
-    toWrite(type){
+    toAttack (type) {
         let textType = `Jogador: ${ this.name }     Idade: ${ this.age } anos`
         textType += "\n------------------------------------------------------------------------------"
         textType += "\n**Destruição do maligno Magnus:"
@@ -25,5 +25,5 @@ class adventure {
         console.log(textType)
     }
     }
-let fight = new adventure ("Egberto",33);
-fight.toWrite("Guerreiro")
+let fight = new hero ("Egberto",33);
+fight.toAttack ("Guerreiro")
